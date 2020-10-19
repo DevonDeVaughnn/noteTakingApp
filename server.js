@@ -9,12 +9,11 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Gives more options for POST requests
-app.use(express.urlencoded({ extended: true })); // application/x-www-form-urlencoded
-app.use(express.json()); // application/json
+app.use(express.urlencoded({ extended: true })); 
+app.use(express.json());
 
-app.use(express.static('public')) // use static files
+app.use(express.static('public')) 
 
-// Listener function
 app.listen(PORT, function() {
     console.log('Listening on http://localhost:' + PORT);
 });
