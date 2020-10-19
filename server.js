@@ -6,7 +6,7 @@ const fs = require("fs")
 const dataPath = __dirname + "/db/db.json";
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 
 // Gives more options for POST requests
 app.use(express.urlencoded({ extended: true })); 
@@ -117,8 +117,8 @@ if (!fs.existsSync(dataPath)) {
 }
 
 // This function stores the database by writing it to db.json
-function storeDB(ref) {
-    fs.writeFile(dataPath,JSON.stringify(ref),"utf8",err=>{if (err) throw err});
+function storeDB(refspec) {
+    fs.writeFile(dataPath,JSON.stringify(refspec),"utf8",err=>{if (err) throw err});
 }
 
 // This function reads the database, then returns the information

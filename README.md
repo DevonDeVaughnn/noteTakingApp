@@ -26,7 +26,8 @@ Contact me at: devondevaughnn@gmail.com
 
 ## Installation
 
-* Download code and run using command "node index.js"
+* Download code and run using command "node index.js" or use the heroku link: 
+
        
 ## Usage 
 
